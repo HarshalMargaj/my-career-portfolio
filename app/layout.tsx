@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { TASA_Orbiter } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
-const tasaOrbiter = TASA_Orbiter({
+const inter = Inter({
 	subsets: ["latin"],
 	weight: ["400", "500", "600", "700", "800"],
 });
@@ -20,7 +20,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${tasaOrbiter.className} h-full antialiased bg-black`}
+			className={`${inter.className} h-full antialiased bg-black`}
 		>
 			<body className="min-h-full flex flex-col">{children}</body>
 		</html>
