@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "motion/react";
+import Navbar from "../Navbar";
 
 const container = {
 	hidden: {},
@@ -27,6 +28,7 @@ const HeroSection = () => {
 			transition={{ duration: 0.5 }}
 			className=" h-screen flex flex-col items-center justify-center gap-4 relative overflow-x-hidden"
 		>
+			<Navbar />
 			<motion.img
 				animate={{ y: [0, -20, 0] }}
 				transition={{
