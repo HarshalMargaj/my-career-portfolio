@@ -55,7 +55,7 @@ const HeroSection = () => {
 					}}
 					className="w-2 h-2 bg-accent rounded-full"
 				></motion.div>
-				<div className="text-secondary text-xl">Available for work</div>
+				<div className="text-secondary text-lg">Available for work</div>
 			</motion.div>
 			<motion.div
 				variants={item}

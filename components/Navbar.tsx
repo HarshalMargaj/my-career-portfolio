@@ -39,7 +39,7 @@ const navItems = [
 const Navbar = () => {
 	return (
 		<div className="absolute top-10 text-primary flex items-center justify-between w-300 ">
-			<div className="font-bold text-black text-3xl bg-accent rounded-md w-15 h-15 flex items-center justify-center">
+			<div className="font-bold text-black text-3xl bg-accent rounded-xl w-15 h-15 flex items-center justify-center">
 				HM
 			</div>
 			<div className="flex items-center gap-6 bg-[#141414b3] py-4 px-8 border-t border-[#1e1e1e] rounded-xl h-16">
