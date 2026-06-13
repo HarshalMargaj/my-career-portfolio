@@ -21,6 +21,7 @@ export default function RootLayout({
 		<html
 			lang="en"
 			className={`${inter.className} h-full antialiased bg-black`}
+			suppressHydrationWarning
 		>
 			<body className="min-h-full flex flex-col">{children}</body>
 		</html>
