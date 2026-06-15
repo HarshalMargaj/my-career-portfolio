@@ -143,6 +143,7 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "motion/react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
 	{
@@ -161,8 +162,8 @@ const projects = [
 			"Shadcn UI",
 			"Clerk",
 		],
-		liveDemo: "https://connectly-demo.vercel.app",
-		sourceCode: "https://github.com/yourname/connectly",
+		liveDemo: "https://connectly-ivory.vercel.app/",
+		sourceCode: "https://github.com/HarshalMargaj/connectly",
 		thumbnail: "/projects/connectlylight.png",
 	},
 	{
@@ -181,8 +182,8 @@ const projects = [
 			"Shadcn UI",
 			"Clerk",
 		],
-		liveDemo: "https://taskflow-demo.vercel.app",
-		sourceCode: "https://github.com/yourname/taskflow",
+		liveDemo: "https://taskflow-v3.vercel.app/",
+		sourceCode: "https://github.com/HarshalMargaj/taskflow",
 		thumbnail: "/projects/taskflow.png",
 	},
 	{
@@ -198,8 +199,8 @@ const projects = [
 			"Strapi",
 			"Stripe",
 		],
-		liveDemo: "https://shopvista-demo.vercel.app",
-		sourceCode: "https://github.com/yourname/shopvista",
+		liveDemo: "https://shopvistav4.netlify.app/",
+		sourceCode: "https://github.com/HarshalMargaj/E-Commerce-Application",
 		thumbnail: "/projects/shopvista.png",
 	},
 ];
@@ -227,6 +228,8 @@ interface Project {
 	sourceCode: string;
 	thumbnail: string;
 }
+
+const MotionLink = motion.create(Link);
 
 const ProjectCard = ({
 	project,
@@ -260,13 +263,25 @@ const ProjectCard = ({
 						{project.title}
 					</div>
 					<div className="text-secondary">{project.description}</div>
-					<div className="space-x-2">
-						<button className="rounded-xl text-black font-semibold cursor-pointer bg-accent p-2 px-4">
+					<div className="flex gap-4 items-center">
+						<MotionLink
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+							href={project.liveDemo}
+							target="_blank"
+							className="rounded-xl text-black font-semibold cursor-pointer bg-accent p-2 px-4"
+						>
 							Live Demo
-						</button>
-						<button className="rounded-xl border border-neutral-800 text-primary cursor-pointer p-2 px-4">
+						</MotionLink>
+						<MotionLink
+							whileHover={{ scale: 1.05 }}
+							whileTap={{ scale: 0.95 }}
+							href={project.sourceCode}
+							target="_blank"
+							className="rounded-xl border border-neutral-800 text-primary cursor-pointer p-2 px-4"
+						>
 							Source Code
-						</button>
+						</MotionLink>
 					</div>
 					<div className="flex items-center flex-wrap gap-4">
 						{project.techStack.map(tech => (
@@ -304,7 +319,12 @@ const ProjectsSection = () => {
 	});
 
 	return (
-		<motion.div variants={container} className="max-w-6xl mx-auto py-28">
+		<motion.div
+			variants={container}
+			initial="hidden"
+			whileInView="show"
+			className="max-w-6xl mx-auto py-28"
+		>
 			<motion.div
 				variants={item}
 				className="uppercase text-accent tracking-widest font text-lg"
@@ -313,7 +333,7 @@ const ProjectsSection = () => {
 			</motion.div>
 			<motion.div
 				variants={item}
-				className="text-[64px] text-primary mb-10"
+				className="text-[64px] text-primary mb-20"
 			>
 				What I&apos;ve Built
 			</motion.div>
