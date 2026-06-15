@@ -85,7 +85,8 @@ const AboutSection = () => {
 		"relative border-t-2 border-[#1e1e1e]  overflow-hidden rounded-3xl h-125  bg-[#141414]";
 
 	return (
-		<motion.div
+		<motion.section
+			id="about"
 			variants={container}
 			initial="hidden"
 			whileInView="show"
@@ -172,7 +173,7 @@ const AboutSection = () => {
 					))}
 				</motion.div>
 			</div>
-		</motion.div>
+		</motion.section>
 	);
 };
 

@@ -26,7 +26,8 @@ const timelineItem = {
 
 const ExperienceSection = () => {
 	return (
-		<motion.div
+		<motion.section
+			id="experience"
 			variants={container}
 			initial="hidden"
 			whileInView="show"
@@ -48,7 +49,7 @@ const ExperienceSection = () => {
 			<motion.div variants={timelineItem}>
 				<TimelineDemo />
 			</motion.div>
-		</motion.div>
+		</motion.section>
 	);
 };
 

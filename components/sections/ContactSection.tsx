@@ -56,7 +56,8 @@ const ContactSection = () => {
 	};
 
 	return (
-		<div
+		<section
+			id="contact"
 			className="rounded-t-4xl"
 			style={{
 				background:
@@ -134,7 +135,7 @@ const ContactSection = () => {
 					<div>built with next.js</div>
 				</motion.div>
 			</motion.div>
-		</div>
+		</section>
 	);
 };
 

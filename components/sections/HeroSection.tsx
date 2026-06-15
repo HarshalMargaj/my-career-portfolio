@@ -24,7 +24,8 @@ const MotionLink = motion.create(Link);
 
 const HeroSection = () => {
 	return (
-		<motion.div
+		<motion.section
+			id="home"
 			variants={container}
 			initial="hidden"
 			animate="show"
@@ -95,7 +96,7 @@ const HeroSection = () => {
 					Download CV
 				</MotionLink>
 			</motion.div>
-		</motion.div>
+		</motion.section>
 	);
 };
 
