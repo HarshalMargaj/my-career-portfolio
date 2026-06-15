@@ -4,19 +4,51 @@ import React from "react";
 import { motion } from "motion/react";
 import TimelineDemo from "../timeline-demo";
 
+const container = {
+	hidden: { opacity: 0 },
+	show: {
+		opacity: 1,
+		transition: {
+			staggerChildren: 0.3,
+		},
+	},
+};
+
+const item = {
+	hidden: { opacity: 0, y: 20 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
+const timelineItem = {
+	hidden: { opacity: 0, y: 50 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const ExperienceSection = () => {
 	return (
-		<div className="max-w-6xl mx-auto py-28">
-			<motion.div className="uppercase text-accent tracking-widest font text-lg">
+		<motion.div
+			variants={container}
+			initial="hidden"
+			whileInView="show"
+			viewport={{ once: true, amount: 0.2 }}
+			className="max-w-6xl mx-auto py-28"
+		>
+			<motion.div
+				variants={item}
+				className="uppercase text-accent tracking-widest font text-lg"
+			>
 				experience
 			</motion.div>
-			<motion.div className="text-[64px] text-primary mb-10">
+			<motion.div
+				variants={item}
+				className="text-[64px] text-primary mb-10"
+			>
 				Where I&apos;ve worked
 			</motion.div>
-			<div>
+			<motion.div variants={timelineItem}>
 				<TimelineDemo />
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };
 
