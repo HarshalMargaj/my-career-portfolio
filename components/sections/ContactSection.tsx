@@ -77,14 +77,14 @@ const ContactSection = () => {
 				>
 					Get in Touch
 				</motion.div>
-				<motion.div variants={item} className="text-[#a5a5a5]">
+				<motion.div variants={item} className="text-[#a5a5a5] text-lg">
 					have a project in mind or just want to chat? my inbox is{" "}
 					<br />
 					always open, i&apos;ll try my best to get back to you.
 				</motion.div>
 				<motion.div
 					variants={item}
-					className="flex items-center justify-between gap-4 p-2 rounded-xl text-primary bg-white/4 border border-white/10 px-6 py-4 mx-auto w-100"
+					className="flex items-center justify-between gap-4 p-2 rounded-xl text-primary bg-white/4 border border-white/10 px-6 py-4 mx-auto w-100 text-lg"
 				>
 					harshal.margaj12@gmail.com{" "}
 					{copied ? (
@@ -129,7 +129,7 @@ const ContactSection = () => {
 				/>
 				<motion.div
 					variants={item}
-					className="flex items-center justify-between text-[#a5a5a5] py-10"
+					className="flex items-center justify-between text-[#a5a5a5] py-10 text-lg"
 				>
 					<div>© 2025 harshal margaj. all rights reserved.</div>
 					<div>built with next.js</div>

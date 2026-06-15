@@ -82,7 +82,7 @@ const HeroSection = () => {
 					href="#projects"
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
-					className="rounded-md p-2 px-4 text-lg text-black bg-accent font-medium cursor-pointer"
+					className="rounded-md p-2 px-4 text-lg text-black bg-accent hover:bg-accent/85 font-medium cursor-pointer"
 				>
 					View Projects
 				</MotionLink>
@@ -91,7 +91,7 @@ const HeroSection = () => {
 					download="Harshal_Margaj_Resume.pdf"
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
-					className="rounded-md p-2 px-4 text-lg text-primary border border-neutral-800 font-medium cursor-pointer"
+					className="rounded-md p-2 px-4 text-lg text-primary border border-neutral-800 font-medium cursor-pointer hover:text-secondary"
 				>
 					Download CV
 				</MotionLink>

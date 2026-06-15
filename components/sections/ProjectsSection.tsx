@@ -269,7 +269,7 @@ const ProjectCard = ({
 							whileTap={{ scale: 0.95 }}
 							href={project.liveDemo}
 							target="_blank"
-							className="rounded-xl text-black font-semibold cursor-pointer bg-accent p-2 px-4"
+							className="rounded-xl text-black font-semibold cursor-pointer bg-accent p-2 px-4 hover:bg-accent/85"
 						>
 							Live Demo
 						</MotionLink>
@@ -278,7 +278,7 @@ const ProjectCard = ({
 							whileTap={{ scale: 0.95 }}
 							href={project.sourceCode}
 							target="_blank"
-							className="rounded-xl border border-neutral-800 text-primary cursor-pointer p-2 px-4"
+							className="rounded-xl border border-neutral-800 text-primary cursor-pointer p-2 px-4 hover:text-secondary"
 						>
 							Source Code
 						</MotionLink>
