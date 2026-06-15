@@ -324,8 +324,24 @@ const ProjectsSection = () => {
 			variants={container}
 			initial="hidden"
 			whileInView="show"
-			className="max-w-6xl mx-auto pt-28 pb-40"
+			className="max-w-6xl mx-auto pt-28 pb-40 relative"
 		>
+			<div className="absolute inset-y-0 left-0 pointer-events-none">
+				<div className="sticky top-50">
+					<motion.img
+						animate={{ y: [0, -20, 0] }}
+						transition={{
+							duration: 3,
+							repeat: Infinity,
+							ease: "easeInOut",
+						}}
+						src="https://framerusercontent.com/images/dwxExDkm76wbBZfsBvtV3qnpVs.png?scale-down-to=2048"
+						width={500}
+						height={500}
+						className="translate-x-280 blur-md opacity-70"
+					/>
+				</div>
+			</div>
 			<motion.div
 				variants={item}
 				className="uppercase text-accent tracking-widest font text-lg"

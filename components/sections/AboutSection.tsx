@@ -24,6 +24,11 @@ const item = {
 	show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
+const aboutHeader = {
+	hidden: { opacity: 0, y: 20 },
+	show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
+
 const aboutData = [
 	{
 		id: 1,
@@ -91,16 +96,32 @@ const AboutSection = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.2 }}
-			className="max-w-6xl m-auto py-28"
+			className="max-w-6xl m-auto py-28 relative"
 		>
+			<div className="absolute inset-y-0 left-0 pointer-events-none">
+				<div className="sticky top-50">
+					<motion.img
+						animate={{ y: [0, -20, 0] }}
+						transition={{
+							duration: 3,
+							repeat: Infinity,
+							ease: "easeInOut",
+						}}
+						src="https://framerusercontent.com/images/dwxExDkm76wbBZfsBvtV3qnpVs.png?scale-down-to=2048"
+						width={500}
+						height={500}
+						className="-translate-x-110 blur-md opacity-70"
+					/>
+				</div>
+			</div>
 			<motion.div
-				variants={item}
+				variants={aboutHeader}
 				className="uppercase text-accent tracking-widest font text-lg"
 			>
 				about
 			</motion.div>
 			<motion.div
-				variants={item}
+				variants={aboutHeader}
 				className="text-[64px] text-primary mb-10"
 			>
 				Who I am
