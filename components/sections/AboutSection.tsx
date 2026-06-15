@@ -98,7 +98,7 @@ const AboutSection = () => {
 			viewport={{ once: true, amount: 0.2 }}
 			className="max-w-6xl m-auto py-28 relative"
 		>
-			<div className="absolute inset-y-0 left-0 pointer-events-none">
+			<div className="absolute inset-y-0 left-0 pointer-events-none -z-10">
 				<div className="sticky top-50">
 					<motion.img
 						animate={{ y: [0, -20, 0] }}
