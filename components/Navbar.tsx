@@ -47,7 +47,7 @@ const Navbar = () => {
 					<motion.div
 						whileHover={{ color: "#969696" }}
 						key={item.id}
-						className="cursor-pointer"
+						className="cursor-pointer text-primary"
 					>
 						{item.name}
 					</motion.div>
