@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import Navbar from "../Navbar";
+import Link from "next/link";
 
 const container = {
 	hidden: {},
@@ -18,6 +19,8 @@ const item = {
 	hidden: { opacity: 0, y: 20 },
 	show: { opacity: 1, y: 0 },
 };
+
+const MotionLink = motion.create(Link);
 
 const HeroSection = () => {
 	return (
@@ -74,20 +77,23 @@ const HeroSection = () => {
 				Node.js <br />— from pixel-perfect UIs to scalable backends.
 			</motion.div>
 			<motion.div variants={item} className="flex items-center gap-2">
-				<motion.button
+				<MotionLink
+					href="#projects"
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					className="rounded-md p-2 px-4 text-lg text-black bg-accent font-medium cursor-pointer"
 				>
 					View Projects
-				</motion.button>
-				<motion.button
+				</MotionLink>
+				<MotionLink
+					href="/resume/CV_Harshal_Margaj.pdf"
+					download="Harshal_Margaj_Resume.pdf"
 					whileHover={{ scale: 1.05 }}
 					whileTap={{ scale: 0.95 }}
 					className="rounded-md p-2 px-4 text-lg text-primary border border-neutral-800 font-medium cursor-pointer"
 				>
 					Download CV
-				</motion.button>
+				</MotionLink>
 			</motion.div>
 		</motion.div>
 	);

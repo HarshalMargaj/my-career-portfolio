@@ -319,7 +319,8 @@ const ProjectsSection = () => {
 	});
 
 	return (
-		<motion.div
+		<motion.section
+			id="projects"
 			variants={container}
 			initial="hidden"
 			whileInView="show"
@@ -353,7 +354,7 @@ const ProjectsSection = () => {
 					);
 				})}
 			</div>
-		</motion.div>
+		</motion.section>
 	);
 };
 
