@@ -323,7 +323,7 @@ const ProjectsSection = () => {
 			variants={container}
 			initial="hidden"
 			whileInView="show"
-			className="max-w-6xl mx-auto py-28"
+			className="max-w-6xl mx-auto pt-28 pb-40"
 		>
 			<motion.div
 				variants={item}
