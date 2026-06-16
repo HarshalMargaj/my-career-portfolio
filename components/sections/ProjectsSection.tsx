@@ -327,7 +327,7 @@ const ProjectsSection = () => {
 			variants={container}
 			initial="hidden"
 			whileInView="show"
-			className="max-w-6xl mx-auto pt-16 md:pt-20 lg:pt-28 pb-16 md:pb-20 lg:pb-40 relative px-4 md:px-8 lg:px-0"
+			className="max-w-6xl mx-auto pt-16 md:pt-20 lg:pt-28 pb-20 md:pb-20 lg:pb-40 relative px-4 md:px-8 lg:px-0"
 		>
 			<Globe position="translate-x-110 lg:translate-x-280" />
 			<motion.div

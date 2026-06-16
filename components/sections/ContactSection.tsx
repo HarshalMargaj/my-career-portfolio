@@ -69,22 +69,25 @@ const ContactSection = () => {
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.2 }}
-				className="max-w-6xl mx-auto pt-28 text-center space-y-4"
+				className="max-w-6xl mx-auto pt-16 md:pt-20 lg:pt-28 text-center space-y-4 px-4 md:px-8 lg:px-0"
 			>
 				<motion.div
 					variants={item}
-					className="text-[64px] text-primary"
+					className="text-[36px] md:text-[48px] lg:text-[64px] text-primary"
 				>
 					Get in Touch
 				</motion.div>
-				<motion.div variants={item} className="text-[#a5a5a5] text-lg">
+				<motion.div
+					variants={item}
+					className="text-[#a5a5a5] text-sm md:text-base lg:text-lg"
+				>
 					have a project in mind or just want to chat? my inbox is{" "}
-					<br />
+					<br className="hidden md:block" />
 					always open, i&apos;ll try my best to get back to you.
 				</motion.div>
 				<motion.div
 					variants={item}
-					className="flex items-center justify-between gap-4 p-2 rounded-xl text-primary bg-white/4 border border-white/10 px-6 py-4 mx-auto w-100 text-lg"
+					className="flex items-center justify-between gap-4 p-2 rounded-xl text-primary bg-white/4 border border-white/10 px-6 py-4 mx-auto w-full max-w-sm md:max-w-md lg:max-w-lg text-sm md:text-base lg:text-lg"
 				>
 					harshal.margaj12@gmail.com{" "}
 					{copied ? (
@@ -100,7 +103,7 @@ const ContactSection = () => {
 					href="/resume/CV_Harshal_Margaj.pdf"
 					download="Harshal_Margaj_Resume.pdf"
 					variants={item}
-					className="text-center text-[#a5a5a5] cursor-pointer hover:text-white  max-w-50 mx-auto block"
+					className="text-center text-[#a5a5a5] cursor-pointer hover:text-white  max-w-50 mx-auto block text-sm md:text-base"
 				>
 					or download my resume
 				</MotionLink>
@@ -125,14 +128,16 @@ const ContactSection = () => {
 				</motion.div>
 				<motion.hr
 					variants={item}
-					className="text-white/10 mt-28 mb-0"
+					className="text-white/10 mt-16 md:mt-20 lg:mt-28 mb-0"
 				/>
 				<motion.div
 					variants={item}
-					className="flex items-center justify-between text-[#a5a5a5] py-10 text-lg"
+					className="flex items-center justify-between text-[#a5a5a5] py-10 text-sm md:text-base lg:text-lg md:px-8 lg:px-0"
 				>
-					<div>© 2025 harshal margaj. all rights reserved.</div>
-					<div>built with next.js</div>
+					<div className="text-start">
+						© 2025 harshal margaj. all rights reserved.
+					</div>
+					<div className="text-start">built with next.js</div>
 				</motion.div>
 			</motion.div>
 		</section>
