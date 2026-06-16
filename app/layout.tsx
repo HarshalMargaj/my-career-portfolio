@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import CustomCursor from "@/components/CustomCursor";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
 			suppressHydrationWarning
 		>
 			<body className="min-h-full flex flex-col overflow-x-hidden">
+				<CustomCursor />
 				{children}
 			</body>
 		</html>
