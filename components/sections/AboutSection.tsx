@@ -36,7 +36,7 @@ const aboutData = [
 		title: "Full Stack Developer",
 		description:
 			"Building modern, scalable web applications with a focus on performance, usability, and clean user experiences.",
-		span: "md:col-span-2",
+		span: "md:col-span-1 lg:col-span-2",
 		grid: 1,
 		ui: <FullStackUi />,
 		glow: <GlowEffect top="-100px" left="-50px" />,
@@ -46,7 +46,7 @@ const aboutData = [
 		title: "Currently Exploring",
 		description:
 			"Experimenting with AI applications, RAG systems, semantic search, and emerging developer tools.",
-		span: "md:col-span-2",
+		span: "md:col-span-1 lg:col-span-2",
 		grid: 1,
 		ui: <RAGUi />,
 		glow: <GlowEffect bottom="-100px" right="-50px" />,
@@ -66,7 +66,7 @@ const aboutData = [
 		title: "What I Actually Do",
 		description:
 			"I transform ideas into production-ready experiences, from crafting polished interfaces to integrating APIs and writing maintainable code.",
-		span: "col-span-4",
+		span: "col-span-full md:col-span-1 lg:col-span-4",
 		grid: 2,
 		ui: <WhatIDoUi />,
 		glow: <GlowEffect top="-100px" left="-50px" />,
@@ -76,7 +76,7 @@ const aboutData = [
 		title: "Tech Ecosystem",
 		description:
 			"The technologies and tools I use to design, develop, and ship modern web applications.",
-		span: "col-span-3",
+		span: "col-span-full md:col-span-1 lg:col-span-3",
 		grid: 2,
 		ui: <OrbitingIcons />,
 		glow: <GlowEffect top="-100px" left="-50px" />,
@@ -97,22 +97,22 @@ const AboutSection = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.2 }}
-			className="max-w-6xl m-auto py-28 relative"
+			className="max-w-6xl m-auto py-16 md:py-20 lg:py-28 relative px-4 md:px-8 lg:px-0"
 		>
 			<Globe position="-translate-x-110" />
 			<motion.div
 				variants={aboutHeader}
-				className="uppercase text-accent tracking-widest font text-lg"
+				className="uppercase text-accent tracking-widest font text-sm md:text-base lg:text-lg"
 			>
 				about
 			</motion.div>
 			<motion.div
 				variants={aboutHeader}
-				className="text-[64px] text-primary mb-10"
+				className="text-[36px] md:text-[48px] lg:text-[64px] text-primary mb-10"
 			>
 				Who I am
 			</motion.div>
-			<div className="space-y-6">
+			<div className="space-y-4 md:space-y-6">
 				<motion.div
 					variants={container}
 					initial="hidden"
@@ -121,7 +121,7 @@ const AboutSection = () => {
 						once: true,
 						amount: 0.2,
 					}}
-					className="grid grid-cols-1 md:grid-cols-6 gap-6 text-primary"
+					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-4 md:gap-6 text-primary"
 				>
 					{gridOne.map(data => (
 						<motion.div
@@ -134,10 +134,10 @@ const AboutSection = () => {
 							<div className="relative z-10 p-6 space-y-2 flex flex-col h-full">
 								{data.ui}
 								<div className="mt-auto space-y-2">
-									<div className="text-2xl text-primary">
+									<div className="text-lg md:text-xl lg:text-2xl text-primary">
 										{data.title}
 									</div>
-									<div className="text-[#a5a5a5]">
+									<div className="text-[#a5a5a5] text-sm md:text-base">
 										{data.description}
 									</div>
 								</div>
@@ -153,7 +153,7 @@ const AboutSection = () => {
 						once: true,
 						amount: 0.2,
 					}}
-					className="grid grid-cols-7 gap-6"
+					className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-4 md:gap-6"
 				>
 					{gridTwo.map(data => (
 						<motion.div
@@ -168,10 +168,10 @@ const AboutSection = () => {
 									{data.ui}
 								</div>
 								<div className="mt-auto space-y-2">
-									<div className="text-2xl text-primary">
+									<div className="text-lg md:text-xl lg:text-2xl text-primary">
 										{data.title}
 									</div>
-									<div className="text-[#a5a5a5]">
+									<div className="text-[#a5a5a5] text-sm md:text-base">
 										{data.description}
 									</div>
 								</div>

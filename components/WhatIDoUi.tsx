@@ -24,16 +24,18 @@ const WhatIDoUi = () => {
 						delay: index * 0.3,
 					}}
 					key={label}
-					className="px-4 py-3 rounded-xl text-primary border-t border-[#424242] flex items-center gap-3"
+					className="p-2 md:p-2 lg:px-4 lg:py-3 rounded-xl text-primary border-t border-[#424242] flex items-center gap-3"
 					style={{
 						background:
 							"radial-gradient(100% 186% at 34.5% 135.3%, rgb(66, 66, 66) 0%, rgb(30, 30, 30) 100%)",
 					}}
 				>
-					<div className="w-9 h-9 rounded-lg bg-[#1a3a25] border border-[#2a4a35] flex items-center justify-center">
+					<div className="shrink-0 w-9 h-9 rounded-lg bg-[#1a3a25] border border-[#2a4a35] flex items-center justify-center">
 						<Icon className="w-4 h-4 text-[#3ddc84]" />
 					</div>
-					<span className="">{label}</span>
+					<span className="text-xs md:text-xs lg:text-base">
+						{label}
+					</span>
 				</motion.div>
 			))}
 		</div>

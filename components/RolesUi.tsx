@@ -34,8 +34,10 @@ const RolesUi = () => {
 								className="w-2 h-2 rounded-full bg-accent shrink-0"
 							></motion.div>
 							<div>
-								<div className="leading-none">{role.role}</div>
-								<div className="text-secondary flex items-center">
+								<div className="leading-none text-sm md:text-base">
+									{role.role}
+								</div>
+								<div className="text-secondary flex items-center text-sm md:text-base">
 									Remote <Dot /> Full Time <Dot /> Internship
 								</div>
 							</div>
@@ -49,7 +51,7 @@ const RolesUi = () => {
 					)}
 				</motion.div>
 			))}
-			<div className="text-secondary italic mt-2">
+			<div className="text-secondary italic mt-2 text-sm md:text-base">
 				Available to join immediately
 			</div>
 		</div>
