@@ -8,6 +8,7 @@ import WhatIDoUi from "../WhatIDoUi";
 import RolesUi from "../RolesUi";
 import RAGUi from "../RAGUi";
 import FullStackUi from "../FullStackUi";
+import Globe from "../Globe";
 
 const container = {
 	hidden: { opacity: 0 },
@@ -98,22 +99,7 @@ const AboutSection = () => {
 			viewport={{ once: true, amount: 0.2 }}
 			className="max-w-6xl m-auto py-28 relative"
 		>
-			<div className="absolute inset-y-0 left-0 pointer-events-none -z-10">
-				<div className="sticky top-50">
-					<motion.img
-						animate={{ y: [0, -20, 0] }}
-						transition={{
-							duration: 3,
-							repeat: Infinity,
-							ease: "easeInOut",
-						}}
-						src="https://framerusercontent.com/images/dwxExDkm76wbBZfsBvtV3qnpVs.png?scale-down-to=2048"
-						width={500}
-						height={500}
-						className="-translate-x-110 blur-md opacity-70"
-					/>
-				</div>
-			</div>
+			<Globe position="-translate-x-110" />
 			<motion.div
 				variants={aboutHeader}
 				className="uppercase text-accent tracking-widest font text-lg"
