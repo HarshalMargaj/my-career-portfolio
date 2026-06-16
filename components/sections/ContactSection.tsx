@@ -69,7 +69,7 @@ const ContactSection = () => {
 				initial="hidden"
 				whileInView="show"
 				viewport={{ once: true, amount: 0.2 }}
-				className="max-w-6xl mx-auto pt-16 md:pt-20 lg:pt-28 text-center space-y-4 px-4 md:px-8 lg:px-0"
+				className="max-w-6xl mx-auto pt-10 md:pt-20 lg:pt-28 text-center space-y-4 px-4 md:px-8 lg:px-0"
 			>
 				<motion.div
 					variants={item}
@@ -128,7 +128,7 @@ const ContactSection = () => {
 				</motion.div>
 				<motion.hr
 					variants={item}
-					className="text-white/10 mt-16 md:mt-20 lg:mt-28 mb-0"
+					className="text-white/10 mt-10 md:mt-20 lg:mt-28 mb-0"
 				/>
 				<motion.div
 					variants={item}

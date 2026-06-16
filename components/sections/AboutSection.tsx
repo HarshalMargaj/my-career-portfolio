@@ -97,7 +97,7 @@ const AboutSection = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.2 }}
-			className="max-w-6xl m-auto py-16 md:py-20 lg:py-28 relative px-4 md:px-8 lg:px-0"
+			className="max-w-6xl m-auto py-10 md:py-20 lg:py-28 relative px-4 md:px-8 lg:px-0"
 		>
 			<Globe position="-translate-x-110" />
 			<motion.div

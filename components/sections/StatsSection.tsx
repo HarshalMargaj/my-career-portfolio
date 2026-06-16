@@ -53,7 +53,7 @@ const StatsSection = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.5 }}
-			className="text-primary max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto  gap-4 md:gap-6 px-4 md:px-8 lg:px-0"
+			className="text-primary max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto  gap-4 md:gap-6 px-4 md:px-8 lg:px-0 pb-10 md:pb-0"
 		>
 			{stats.map(stat => (
 				<motion.div
