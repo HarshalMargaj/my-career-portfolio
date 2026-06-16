@@ -7,7 +7,7 @@ interface GlobeProps {
 
 const Globe = ({ position }: GlobeProps) => {
 	return (
-		<div className="absolute inset-y-0 left-0 pointer-events-none -z-10">
+		<div className="hidden lg:block absolute inset-y-0 left-0 pointer-events-none -z-10">
 			<div className="sticky top-50">
 				<motion.img
 					animate={{ y: [0, -20, 0] }}

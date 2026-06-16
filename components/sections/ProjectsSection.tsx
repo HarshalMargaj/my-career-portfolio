@@ -254,23 +254,25 @@ const ProjectCard = ({
 					scale,
 					top: `calc(-5vh + ${i * 32}px)`,
 				}}
-				className="relative top-0 w-full max-w-6xl bg-[#141414] rounded-2xl p-6 space-y-2 h-125 border-t-2 border-[#1e1e1e] flex items-center gap-6 overflow-hidden"
+				className="relative top-0 w-full max-w-6xl bg-[#141414] rounded-2xl p-6 space-y-2 md:h-110 lg:h-125 border-t-2 border-[#1e1e1e] flex flex-col md:flex-row items-center  md:gap-4 lg:gap-6 overflow-hidden"
 			>
-				<div className="space-y-4">
+				<div className="space-y-4 flex flex-col h-full">
 					<div className="uppercase tracking-widest text-secondary text-sm">
 						{project.category}
 					</div>
-					<div className="text-primary text-[32px]">
+					<div className="text-primary text-[22px] md:text-[26px] lg:text-[32px]">
 						{project.title}
 					</div>
-					<div className="text-secondary">{project.description}</div>
-					<div className="flex gap-4 items-center">
+					<div className="text-secondary text-sm md:text-base">
+						{project.description}
+					</div>
+					<div className="flex gap-2 md:gap-4 items-center">
 						<MotionLink
 							whileHover={{ scale: 1.05 }}
 							whileTap={{ scale: 0.95 }}
 							href={project.liveDemo}
 							target="_blank"
-							className="rounded-xl text-black font-semibold cursor-pointer bg-accent p-2 px-4 hover:bg-accent/85"
+							className="rounded-xl text-black font-semibold cursor-pointer bg-accent p-2 px-4 hover:bg-accent/85 text-sm md:text-base"
 						>
 							Live Demo
 						</MotionLink>
@@ -279,12 +281,12 @@ const ProjectCard = ({
 							whileTap={{ scale: 0.95 }}
 							href={project.sourceCode}
 							target="_blank"
-							className="rounded-xl border border-neutral-800 text-primary cursor-pointer p-2 px-4 hover:text-secondary"
+							className="rounded-xl border border-neutral-800 text-primary cursor-pointer p-2 px-4 hover:text-secondary text-sm md:text-base"
 						>
 							Source Code
 						</MotionLink>
 					</div>
-					<div className="flex items-center flex-wrap gap-4">
+					<div className="flex items-center flex-wrap gap-2 md:gap-4 mt-auto">
 						{project.techStack.map(tech => (
 							<div
 								key={tech}
@@ -292,7 +294,7 @@ const ProjectCard = ({
 									background:
 										"radial-gradient(circle at top left, #424242 0%, #262626 100%)",
 								}}
-								className="p-2 rounded-xl text-primary"
+								className="text-sm md:text-base p-2 rounded-xl text-primary"
 							>
 								{tech}
 							</div>
@@ -305,7 +307,7 @@ const ProjectCard = ({
 					alt={`${project.title} thumbnail`}
 					width={1200}
 					height={400}
-					className="-mr-36 w-175 rounded-xl"
+					className="hidden lg:block -mr-36 w-175 rounded-xl"
 				/>
 			</motion.div>
 		</div>
@@ -325,18 +327,18 @@ const ProjectsSection = () => {
 			variants={container}
 			initial="hidden"
 			whileInView="show"
-			className="max-w-6xl mx-auto pt-28 pb-40 relative"
+			className="max-w-6xl mx-auto pt-16 md:pt-20 lg:pt-28 pb-16 md:pb-20 lg:pb-40 relative px-4 md:px-8 lg:px-0"
 		>
-			<Globe position="translate-x-280" />
+			<Globe position="translate-x-110 lg:translate-x-280" />
 			<motion.div
 				variants={item}
-				className="uppercase text-accent tracking-widest font text-lg"
+				className="uppercase text-accent tracking-widest font text-sm md:text-base lg:text-lg"
 			>
 				Projects
 			</motion.div>
 			<motion.div
 				variants={item}
-				className="text-[64px] text-primary mb-20"
+				className="text-[36px] md:text-[48px] lg:text-[64px] text-primary mb-20"
 			>
 				What I&apos;ve Built
 			</motion.div>
