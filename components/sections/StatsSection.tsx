@@ -53,7 +53,7 @@ const StatsSection = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.5 }}
-			className="text-primary max-w-6xl grid grid-cols-4 mx-auto gap-6"
+			className="text-primary max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto  gap-4 md:gap-6 px-4 md:px-8 lg:px-0"
 		>
 			{stats.map(stat => (
 				<motion.div
@@ -67,9 +67,9 @@ const StatsSection = () => {
 						type: "spring",
 						stiffness: 300,
 					}}
-					className="border border-neutral-800 p-2 rounded-xl flex items-center gap-4 bg-[#141414] h-24 justify-center cursor-pointer"
+					className="border border-neutral-800 p-2 rounded-xl flex items-center gap-4 bg-[#141414] h-18 md:h-24 justify-center cursor-pointer"
 				>
-					<div className="text-5xl font-semibold">
+					<div className="text-3xl md:text-4xl lg:text-5xl font-semibold">
 						<CountUp
 							end={stat.value}
 							duration={5}
@@ -77,7 +77,9 @@ const StatsSection = () => {
 						/>
 					</div>
 
-					<div className="text-[#a5a5a5]">{stat.label}</div>
+					<div className="text-sm md:text-base text-[#a5a5a5]">
+						{stat.label}
+					</div>
 				</motion.div>
 			))}
 		</motion.div>
