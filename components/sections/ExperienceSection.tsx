@@ -32,17 +32,17 @@ const ExperienceSection = () => {
 			initial="hidden"
 			whileInView="show"
 			viewport={{ once: true, amount: 0.2 }}
-			className="max-w-6xl mx-auto py-28"
+			className="max-w-6xl mx-auto py-16 md:py-20 lg:py-28 px-4 md:px-8 lg:px-0"
 		>
 			<motion.div
 				variants={item}
-				className="uppercase text-accent tracking-widest font text-lg"
+				className="uppercase text-accent tracking-widest font text-sm md:text-base lg:text-lg"
 			>
 				experience
 			</motion.div>
 			<motion.div
 				variants={item}
-				className="text-[64px] text-primary mb-10"
+				className="text-[36px] md:text-[48px] lg:text-[64px] text-primary mb-10"
 			>
 				Where I&apos;ve worked
 			</motion.div>

@@ -7,10 +7,10 @@ export default function TimelineDemo() {
 			title: "Apr 2024 - Mar 2025",
 			content: (
 				<div>
-					<h3 className="text-xl font-semibold text-primary mb-1">
+					<h3 className="text-base md:text-lg lg:text-xl font-semibold text-primary mb-1">
 						Software Engineer
 					</h3>
-					<p className="mb-4 text-base text-neutral-400">
+					<p className="mb-4 text-sm md:text-base lg:text-base text-neutral-400">
 						Oculon.AI, Mumbai
 					</p>
 					<ul className="space-y-2 text-xs md:text-lg text-secondary list-disc pl-4">
@@ -54,10 +54,10 @@ export default function TimelineDemo() {
 			title: "Jul 2023 - Sep 2023",
 			content: (
 				<div>
-					<h3 className="text-xl font-semibold text-primary mb-1">
+					<h3 className="text-base md:text-lg lg:text-xl font-semibold text-primary mb-1">
 						Full Stack Developer Intern
 					</h3>
-					<p className="mb-4 text-base text-neutral-400">
+					<p className="mb-4 text-sm md:text-base lg:text-base text-neutral-400">
 						Fynd, Mumbai
 					</p>
 					<ul className="space-y-2 text-xs md:text-lg text-secondary list-disc pl-4">
