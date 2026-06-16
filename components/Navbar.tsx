@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { motion } from "motion/react";
+import React, { useRef, useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "motion/react";
 import Link from "next/link";
 
 const navItems = [
@@ -35,15 +35,39 @@ const navItems = [
 const MotionLink = motion.create(Link);
 
 const Navbar = () => {
+	const [hidden, setHidden] = useState(false);
+	const { scrollY } = useScroll();
+	const lastY = useRef(0);
+
+	useMotionValueEvent(scrollY, "change", latest => {
+		const dif = latest - lastY.current;
+
+		if (latest > 100 && dif > 0) {
+			setHidden(true);
+		} else if (dif < 0) {
+			setHidden(false);
+		}
+
+		lastY.current = latest;
+	});
+
 	return (
-		<div className="absolute top-10 text-primary flex items-center justify-between w-300 ">
+		<motion.div
+			variants={{
+				hidden: { y: "-200%" },
+				show: { y: 0 },
+			}}
+			animate={hidden ? "hidden" : "show"}
+			transition={{ duration: 0.3, ease: "easeInOut" }}
+			className="fixed top-10 text-primary flex items-center justify-between w-6xl z-50"
+		>
 			<MotionLink
 				href="#home"
 				className="font-bold text-black text-3xl bg-accent rounded-xl w-15 h-15 flex items-center justify-center"
 			>
 				HM
 			</MotionLink>
-			<div className="flex items-center gap-6 bg-[#141414b3] py-4 px-8 border-t border-[#1e1e1e] rounded-xl h-16">
+			<div className="flex items-center gap-6 bg-[#141414b3] py-4 px-8 border-t border-[#1e1e1e] rounded-xl h-16 backdrop-blur-2xl">
 				{navItems.map(item => (
 					<MotionLink
 						href={item.to}
@@ -63,7 +87,7 @@ const Navbar = () => {
 			>
 				Hire me
 			</MotionLink>
-		</div>
+		</motion.div>
 	);
 };
 
