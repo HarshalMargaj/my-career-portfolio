@@ -135,7 +135,7 @@ const ContactSection = () => {
 					className="flex items-center justify-between text-[#a5a5a5] py-10 text-sm md:text-base lg:text-lg md:px-8 lg:px-0"
 				>
 					<div className="text-start">
-						© 2025 harshal margaj. all rights reserved.
+						© 2026 harshal margaj. all rights reserved.
 					</div>
 					<div className="text-start">built with next.js</div>
 				</motion.div>
