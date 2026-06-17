@@ -254,7 +254,7 @@ const ProjectCard = ({
 					scale,
 					top: `calc(-5vh + ${i * 32}px)`,
 				}}
-				className="relative top-0 w-full max-w-6xl bg-[#141414] rounded-2xl p-6 space-y-2 h-110 md:h-110 lg:h-125 border-t-2 border-[#1e1e1e] flex flex-col md:flex-row items-center  md:gap-4 lg:gap-6 overflow-hidden"
+				className="relative top-0 w-full max-w-6xl bg-[#141414] rounded-2xl p-6 space-y-2 h-125 md:h-110 lg:h-125 border-t-2 border-[#1e1e1e] flex flex-col md:flex-row items-center  md:gap-4 lg:gap-6 overflow-hidden"
 			>
 				<div className="space-y-4 flex flex-col h-full">
 					<div className="uppercase tracking-widest text-secondary text-sm">
