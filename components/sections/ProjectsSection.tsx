@@ -149,6 +149,27 @@ import Globe from "../Globe";
 const projects = [
 	{
 		id: 1,
+		category: "AI / RAG",
+		title: "DocuChat — PDF RAG Chatbot",
+		description:
+			"A full-stack RAG application enabling users to upload PDFs and query them using natural language, with AI-generated answers grounded in retrieved document passages via semantic search.",
+		techStack: [
+			"Retrieval Augmented Generation",
+			"Next.js",
+			"Prisma",
+			"Supabase",
+			"pgvector",
+			"Vercel AI SDK",
+			"Zustand",
+			"Tailwind CSS",
+			"Clerk",
+		],
+		liveDemo: "https://docuchat-silk.vercel.app/",
+		sourceCode: "https://github.com/HarshalMargaj/rag-pdf-chatbot",
+		thumbnail: "/projects/docuchat.png",
+	},
+	{
+		id: 2,
 		category: "Social Media",
 		title: "Connectly — A Full-Stack Microblogging Platform",
 		description:
@@ -168,7 +189,7 @@ const projects = [
 		thumbnail: "/projects/connectlylight.png",
 	},
 	{
-		id: 2,
+		id: 3,
 		category: "Productivity",
 		title: "TaskFlow — Project Management & Collaboration Tool",
 		description:
@@ -187,23 +208,23 @@ const projects = [
 		sourceCode: "https://github.com/HarshalMargaj/taskflow",
 		thumbnail: "/projects/taskflow.png",
 	},
-	{
-		id: 3,
-		category: "E-Commerce",
-		title: "ShopVista — Full-Stack E-Commerce Platform",
-		description:
-			"A modern e-commerce experience with product search, cart, wishlist, and secure Stripe-powered checkout, backed by a headless CMS for flexible content and product management.",
-		techStack: [
-			"React.js",
-			"Redux Toolkit",
-			"Tailwind CSS",
-			"Strapi",
-			"Stripe",
-		],
-		liveDemo: "https://shopvistav4.netlify.app/",
-		sourceCode: "https://github.com/HarshalMargaj/E-Commerce-Application",
-		thumbnail: "/projects/shopvista.png",
-	},
+	// {
+	// 	id: 3,
+	// 	category: "E-Commerce",
+	// 	title: "ShopVista — Full-Stack E-Commerce Platform",
+	// 	description:
+	// 		"A modern e-commerce experience with product search, cart, wishlist, and secure Stripe-powered checkout, backed by a headless CMS for flexible content and product management.",
+	// 	techStack: [
+	// 		"React.js",
+	// 		"Redux Toolkit",
+	// 		"Tailwind CSS",
+	// 		"Strapi",
+	// 		"Stripe",
+	// 	],
+	// 	liveDemo: "https://shopvistav4.netlify.app/",
+	// 	sourceCode: "https://github.com/HarshalMargaj/E-Commerce-Application",
+	// 	thumbnail: "/projects/shopvista.png",
+	// },
 ];
 
 const container = {
